@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;300;400;700&family=Lexend+Deca:wght@300;400&family=Poppins:wght@500&display=swap');
 *{
     box-sizing: border-box;
 }
@@ -10,7 +9,7 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 
-.containerreg{
+.container{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -22,110 +21,79 @@ body{
     min-height: 100vh;
 }
 
-.containerreg > div{
+.container > div{
     flex: 1;
     padding: 0 20px;
 }
-
-h1{
-    font-size: 40px;
-    line-height: 50px;
-}
-
-p{
-    font-size: 15px;
-    opacity: 0.8;
-}
-
 .box{
-    background-color: #fff;
+    width: 100%;
+    margin-top: 1em;
+    padding: 1em 1em;
+    background-color: hsl(248, 32%, 49%);
+    border: none;
+    color: white;
+    margin-bottom: 2em;
     border-radius: 5px;
-    padding: 30px;
-    box-shadow: 0 6px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
-    text-align: center;
+    box-shadow: 2px 4px 4px 2px rgba(0, 0, 0, .5);
 }
 
 .box p{
+    text-align: center;
     margin: 0;
+}    
+    h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    
+   p {
+        font-size: 15px;
+        opacity: 0.8;
+   }    
+    
+   .container div:nth-child(2)>form {
+    padding: 2em;
+    background-color: white;
+    border-radius: 10px;
 }
 
-.box-small{
-    background-color: hsl(248, 32%, 49%);
-    padding: 20px;
-}
-
-.form-control{
-    position: relative;
-    margin-bottom: 30px;
-}
-
-.form-control small{
-    color: hsl(0, 100%, 74%);
-    right: 0;
-    font-weight: 600;
-    text-align: right;
-    position: absolute;
-    bottom:-24px;
-    text-align: right;
-    opacity: 0;
-}
-input{
-    border-radius: 5px;
-    border: 1px solid hsl(246, 25%, 77%);
-    font-family: 'Poppins' sans-serif;
-    padding: 15px 25px;
-    font-size: 14px;
-    font-weight: 500;
-    display: block;
+.container div:nth-child(2)>form input {
     width: 100%;
-}
-
-
-input:focus{
+    margin-top: 1.5em;
+    height: 40px;
+    padding: 0 1em;
+    border-radius: 3px;
     border: 1.3px solid hsl(248, 32%, 49%);
     outline: none;
+}   
+    
+.container div:nth-child(2)>form>small>a {
+    color: hsl(0, 100%, 74%);
+    font-weight: bold;
+    text-decoration: none;
 }
-.form-control img {
-	opacity: 0;
-	position: absolute;
-	top: 50%;
-	right: 15px;
-	transform: translateY(-50%);
-	height: 20px;
-}
-
-
-button{
-    background-color: hsl(154, 59%, 51%);
+    
+button {
     border-radius: 5px;
+    margin-top: 40px;
     border: 1px solid hsl(154, 59%, 40%);
     border-bottom-width: 3px;
     box-shadow:  0 2px hsl(154, 59%, 40%);
+    background-color: hsl(154, 59%, 51%);
     cursor: pointer;
     text-transform: uppercase;
     letter-spacing: 1px;
     color: #fff;
-    font-weight: 500;
-    font-family: 'Poppins', sans-serif;
     font-size: 15px;
-    padding: 15px 25px;
+    padding: 1em 1em;
     display: block;
     width: 100%;
 }
 
-button:focus{
-    outline: none;
-}
-
-button:active{
+button:active {
     border-bottom-width: 1px;
     transform: translateY(2px);
 }
-.form-control small{
-    opacity: 0;
-}
-
 
 small{
     color: #bbb;
@@ -133,6 +101,7 @@ small{
     font-size: 11px;
     font-weight: 500;
     margin-top: 15px;
+    text-align: center;
 }
 
 small a{
@@ -140,41 +109,71 @@ small a{
     text-decoration: none;
     font-weight: 600;
 }
-
-
-@media screen and (max-width: 375px){
-    body{
-        background-image: url(images/bg-intro-mobile.png);
+    
+  
+    input:required:invalid {
+        outline: none;
+        border: none;
+        border: 1px solid hsl(0, 100%, 74%);
+        background-image: url('./images/icon-error.svg');
+        background-repeat: no-repeat;
+        background-position: right;
+        background-origin: content-box;
     }
-    h1{
-        text-align: center;
-        font-size: 25px;
-        line-height: 30px;    
-    }
-    p{
-        text-align: center; 
-        font-size: 14px;
-    }
-    .containerreg{
-        width: 100%;
-        margin: 0 auto;
-        flex-direction: column;
-    }
-    .box-small{
-        padding: 20px;
-        margin-top: 50px;
-        
-    }
-    .box-small p{
-        text-align: center; 
-        font-size: 16px;
-        /*font-weight: -100;*/
-    }
-    button{
-        padding: 7px;   
-    }
-    small{
+    
+    input:invalid+span {
+        display: inline;
+        color: hsl(0, 100%, 74%);
+        float: right;
         font-size: 10px;
     }
-}
+    
+    input:valid {
+        outline: none;
+        border: none;
+        border: 1px solid hsl(154, 59%, 51%);
+    }
+    
+    span {
+        display: none;
+    }
+    
+    @media screen and (max-width: 375px){
+        body{
+            background-image: url(images/bg-intro-mobile.png);
+        }
+        h1{
+            text-align: center;
+            font-size: 25px;
+            line-height: 30px;    
+        }
+        p{
+            text-align: center; 
+            font-size: 14px;
+        }
+        .container{
+            width: auto;
+            margin: 0 auto;
+            flex-direction: column;
+        }
+        .box-small{
+            padding: 20px;
+            margin-top: 50px;
+            
+        }
+        .box-small p{
+            text-align: center; 
+            font-size: 16px;
+            /*font-weight: -100;*/
+        }
+        button{
+            padding: 8px;
+            font-size: 13px; 
+            padding-top: 10px;  
+            padding-bottom: 10px;
+        }
+        small{
+            font-size: 10px;
+        }
+    }
     

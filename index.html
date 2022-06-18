@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-        <link rel="stylesheet" href="style.css">
-        <title>Registration Form</title>
-    </head>
-    <body>
-        <div class="containerreg">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./images/favicon-32x32.png">
+</head>
+
+<body>
+    <main>
+        <section class="container">
             <div>
-                <h1>Learn to code by watching others</h1>
+                <h1>
+                    Learn to code by watching others </h1>
                 <p>See how experienced developers solve problems in real time. Watching scripted tutorials is great but
-                                    understanding how developers think is invaluable.</p>
+                    understanding how developers think is invaluable.</p>
             </div>
             <div>
                 <div class="box box-small">
@@ -22,31 +26,25 @@
                         then $20/mo. thereafter
                     </p>
                 </div>
-                <form class="box" id="form">
-                    <div class="form-control">
-                        <input type="text" id="firstname" placeholder="First Name" />
-                        <img src="./images/icon-error.svg" alt="error-icon" />
-						<small>First name cannot be empty</small>
-                    </div>
-                    <div class="form-control">
-                        <input type="text" id="lastname" placeholder="Last Name"/>
-                        <small>Last name cannot be empty</small>
-                    </div>
-                    <div class="form-control">
-                        <input type="email" id="email" placeholder="Email Address"/>
-                        <small>Email cannot be empty</small>
-                    </div>
-                    <div class="form-control">
-                        <input type="password" id="password" placeholder="Password"/>
-                        <small>Password cannot be empty</small>
-                    </div>
-                    <button>Claim your free trial</button>
-                    <small>By clicking the button, you are agreeing to our
-                        <a href="">Terms and Services</a>
-                    </small>
-                </form>
-            </div>
-        </div>
 
-    </body>
+                <form action="submit.php" class="box" id="form">
+                
+                    <input type="text" required placeholder="First Name" >
+                    <span>First name cannot be empty</span>
+                    <input type="text" required placeholder="Last Name" >
+                    <span>Last name cannot be empty</span>
+                    <input type="email" required placeholder="Email Address">
+                    <span>Looks like this is not an email</span>
+                    <input type="password" required placeholder="Password" >
+                    <span>Password cannot be empty</span>
+                    <button type="submit"> CLAIM YOUR FREE TRIAL</button>
+                    <small>By clicking the button you are agreeing to our <a href="#">Terms and Services</a></small>
+                </form>
+            
+            </div>
+        </section>
+    </main>
+
+</body>
+
 </html>
